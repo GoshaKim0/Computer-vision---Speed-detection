@@ -1,0 +1,22 @@
+speed_limit_kmh: 130         # Speed limit in km/h
+classes: [2, 3, 5, 7]        # Vehicle classes: car, motorbike, bus, truck
+speed_smoothing_sec: 0.8     # Averaging window for smoother speed
+min_track_frames: 5          # Min frames before speed is valid
+conf: 0.3                    # Detection confidence threshold
+iou: 0.5                     # IOU threshold for tracking
+output_path: out/output.mp4  # Path for processed video
+
+rois:
+  - name: right
+    src: [[823,412],[1274,345],[797,138],[683,140]]
+    width_m: 14.4            # Approx. 4 lanes width
+    length_m: 60.0           # Real-world length of ROI in meters
+    count_line_y_m: 13.7     # Position of trigger line
+    flow_direction: forward  # Vehicles moving away from camera
+
+  - name: left
+    src: [[5,340],[476,400],[613,142],[495,137]]
+    width_m: 14.4
+    length_m: 60.0
+    count_line_y_m: 27.7
+    flow_direction: backward # Vehicles moving toward camera
