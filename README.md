@@ -13,11 +13,11 @@ pip install -r requirements.txt
 
 ### Set or redo ROIs interactively (two directions):
 ```
-python traffic_speed_limit_v3.py --video traffic.mp4 --setup 2 --config config.yaml
+python traffic_speed_limit.py --video traffic.mp4 --setup 2 --config config.yaml
 ```
 ### Run on a video:
 ```
-python traffic_speed_limit_v3.py --video traffic.mp4 --config config.yaml
+python traffic_speed_limit.py --video traffic.mp4 --config config.yaml
 ```
 
 
@@ -29,7 +29,7 @@ out/output.mp4
 
 ## Files
 
-> traffic_speed_limit_v3.py — main script
+> traffic_speed_limit.py — main script
 
 > config.yaml — parameters (speed limit, ROIs, thresholds)
 
